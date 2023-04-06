@@ -1,0 +1,49 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: #1c2a44;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	flex-direction: column;
+
+}
+.inputbox{
+	position: relative;
+	width: 250px;
+}
+.inputbox input{
+	width: 100%;
+	padding: 10px;
+	border: 1px solid rgb(255, 255,255,0.7);
+	border-radius: 10px;
+	outline: none;
+	color: #fff;
+	font-size: 1em;
+	transition: 0.5s;
+	background: rgb(50, 62, 85);
+}
+.inputbox span{
+	position: absolute;
+	left: 0;
+	padding: 10px;
+	pointer-events: none;
+	letter-spacing: 0.5em;
+	color: rgba(255,255,255,0.7);
+	text-transform: uppercase;
+	transition: 0.5s;
+}
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span{
+	color: black;
+	transform: translateX(10px)translateY(-7px);
+	font-size: 0.65em;
+	padding: 0 10px;
+	background: white;
+	letter-spacing: 0.2em;
+}
